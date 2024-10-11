@@ -9,16 +9,17 @@ k = None
 l = None
 m = None
 for i in range(-100,101):
-    if a*(i**3) + b*(i**2) + c*i + d == 0:
-      k=i
-      break
-for i in range(k+1,101):
-   if a*(i**3) + b*(i**2) + c*i + d == 0:
-      l=i
-      break
-for i in range(l+1,101):
-   if a*(i**3) + b*(i**2) + c*i + d == 0:
-      m=i  
+  if a*(i**3) + b*(i**2) + c*i + d == 0:
+    k=i
+    for i in range(k+1,101):
+      if a*(i**3) + b*(i**2) + c*i + d == 0:
+        l=i
+        for i in range(l+1,101):
+          if a*(i**3) + b*(i**2) + c*i + d == 0:
+            m=i  
+            break
+        break
+    break
 if l is None and m is None:
   o=str(k)
 elif m is None:
